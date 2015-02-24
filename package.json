@@ -24,8 +24,8 @@
   },
   "main": "lib/index.js",
   "scripts": {
-    "build": "node_modules/coffee-script/bin/coffee --bare --compile --output lib/ src/*.coffee",
-    "prepublish": "node_modules/coffee-script/bin/coffee --bare --compile --output lib/ src/*.coffee",
+    "build": "node_modules/.bin/coffee --bare --compile --output lib/ src/",
+    "prepublish": "node_modules/.bin/coffee --bare --compile --output lib/ src/",
     "postpublish": "rm -rf lib",
     "test": "node_modules/mocha/bin/mocha --compilers coffee:coffee-script",
     "watch": "node_modules/mocha/bin/mocha --compilers coffee:coffee-script --watch",
@@ -37,7 +37,7 @@
     "requestsync": "~0.2.0"
   },
   "devDependencies": {
-    "coffee-script": "~1.6.3",
+    "coffee-script": "~1.9.1",
     "mocha": "~1.17.1",
     "should": "~3.1.2",
     "nock": "~0.27.2"
